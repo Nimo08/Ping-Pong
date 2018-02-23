@@ -1,0 +1,9 @@
+.jumbo {
+  background-color: beige;
+  display: grid;
+  margin: auto;
+  text-align: center;
+}
+.nimo{
+  background-color: lightgreen;
+}
