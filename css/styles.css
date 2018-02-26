@@ -1,9 +1,31 @@
-.jumbo {
-  background-color: beige;
+.container {
+  background-color: black;
+  opacity: 0.7;
+  background-image:url(../image.jpg)
+}
+
+.jumbotron {
+  background-color: black;
   display: grid;
   margin: auto;
   text-align: center;
+  opacity: 0.7;
 }
 .nimo{
-  background-color: lightgreen;
+  background-color: black;
+  display: block;
+  margin: 10px;
+  text-align: center;
+  text-decoration-color: white;
+  opacity: 0.7;
+}
+.jumbo3{
+  background-color: black;
+  display: grid;
+  text-align: center;
+  opacity: 0.7;
+}
+
+body {
+  color: crimson;
 }

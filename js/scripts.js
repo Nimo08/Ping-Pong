@@ -6,9 +6,13 @@ $(document).ready(function() {
       $("#button").click(function(e){
         //fetch input from the input field
         var input = parseInt($("#number").val());
-         document.write(input);
+
         //outputing the answer
-        $("ul").append("<li>"+ output +"</li>");
+        function finalOutput(){
+          for(var i = 0;i<=(output.length-1);i++){
+        $("ul").append("<li>"+ output[i] +"</li>");
+      }
+    }
 
 
 
@@ -22,55 +26,27 @@ $(document).ready(function() {
          }
     };
     rangeFinder();
-    document.write(numbers);
-    //test divisibility by 3
+    console.log(numbers);
+    //test divisibility for 3,5,15
     var output=[];
-    function divisibility3(){
+    function divisibility1(){
       for(var i=0;i<=numbers.length;i++){
-        if(numbers[i]%3===0){
-          output.push("ping");
-        }
-        else{
-          output.push(i);
-        };  }
-    }
-    divisibility3();
-    document.write(output);
-
-    rangeFinder();
-    document.write(numbers);
-    //test divisibility by 5
-    var output=[];
-    function divisibility5(){
-      for(var i=0;i<=numbers.length;i++){
-        if (numbers[i]%5===0){
-          output.push("pong");
-        }
-      else{
-        output.push(i);
-      }; }
-    }
-    divisibility5();
-    document.write(output);
-
-    rangeFinder();
-    document.write(numbers);
-    //test divisibility by 15
-    var output=[];
-    function divisibility15(){
-      for(var i=0;i<=numbers.length;i++){
-        if(numbers[i]%15===0){
+        if(i%15===0){
           output.push("pingpong");
         }
-        else{
-          output.push(i);
-        }; }
-      }
-    divisibility15();
-    document.write(output);
+        else if(i%5===0){
+          output.push("pong");
+        }
+        else if(i%3===0){
+          output.push("ping");
+        }else{output.push(i);}   }
 
+    }
 
+    divisibility1();
+    console.log(output);
 
+    finalOutput();
     e.preventDefault();
   });
 });
